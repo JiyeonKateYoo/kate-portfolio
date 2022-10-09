@@ -1,2 +1,2 @@
-# kate-portfolio
- kate-portfolio
+# katePortfolio
+ katePortfolio
