@@ -584,8 +584,20 @@ section {
     pointer-events: auto;
 }
 
-/* below 768px screen width */
+/* below 500px screen width */
 @media screen and (max-width: 500px) {
+    section {
+        padding: 5px;
+    }
+    h1{
+        font-size: var(--font-medium);
+    }      
+    h2{
+        font-size: var(--font-regular);
+    }    
+    p{
+        font-size: var(--font-small);
+    }
     #home {
         height: 500px;
         width: 360px;
@@ -599,20 +611,23 @@ section {
     .about__education {
         display: contents;
     }
+    
     #navbar {
       flex-direction: column;
       align-items: flex-start;
       margin: 0;
-      /* background-color: var(--color-dark-red); */
+    }
+    .navbar__logo >a>img{
+        margin: 0;
     }
     .work__projects {
         margin: 0 0px;
     }
-    section {
-        padding: 5px;
-    }
-    h2{
-        font-size: var(--font-medium);
+
+    .arrow-up {
+        right: 65px;
+        width: 50px;
+        height: 50px;
     }
     .navbar__menu {
       flex-direction: column;
@@ -624,31 +639,53 @@ section {
         right: 60px;
     }
     .navbar__menu.open {
-      display: block;
+        display: block;
     }
     .about__majors {
-      flex-direction: column;
+        flex-direction: column;
     }
     .description {
         margin: 0;
     }
+    .about__jobs {
+        margin: 10px 5px;
+    }
+    .education{
+        margin: 10px 0;
+    }
     .major {
-      margin-bottom: 38px;
+        margin-bottom: 38px;
     }
   
     .skillset {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+    .skillset__left {
+        padding: 20px 10px;
+    }  
     .project {
-      flex-grow: 1;
+        flex-grow: 1;
     }
-  
-    .career__avatar {
-      width: 80px;
-      height: 80px;
+
+    .career__avatar.dwider {
+        width: 150px;
+        height: 80px;
+    }
+    .career__descript {
+        display: block;
+    }
+    .career__avatar,
+    .career__avatar:nth-child(odd),
+    .career__descript>i {
+        margin-right: 0px;
+    }   
+ 
+    .jquery>span:nth-child(2) {
+        margin-left: 100px;
     }
   }  
+
+
 
 
 /* below 768px screen width */
