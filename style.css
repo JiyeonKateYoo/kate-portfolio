@@ -185,9 +185,10 @@ section {
     
 }
 .section__container {
-    max-width: 1200px;
+    max-width: 1350px;
     margin: auto;
 }  
+
 
 /* About */
 #about {
@@ -585,6 +586,51 @@ section {
     pointer-events: auto;
 }
 
+
+/* below 768px screen width */
+@media screen and (max-width: 768px) {
+    #home {
+        height: 600px;
+        width: 100%;
+        background: url('imgs/kate-small-bc.png') center/cover no-repeat; /*반응형*/
+    }     
+    .navbar__toggle-btn {
+        display: block;
+    }
+
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .navbar__menu.open {
+        display: block;
+    }
+    .about__majors {
+        flex-direction: column;
+    }
+    .major {
+        margin-bottom: 38px;
+    }
+    .skillset {
+        flex-direction: column;
+    }
+    .project {
+        flex-grow: 1;
+    }
+
+    .career__avatar {
+        width: 80px;
+        height: 80px;
+    }
+}
+
 /* below 500px screen width */
 @media screen and (max-width: 500px) {
     section {
@@ -600,11 +646,12 @@ section {
     p{
         font-size: var(--font-small);
     }
-    #home {
-        height: 500px;
-        width: 360px;
-    }
 
+    #home {
+        height: 450px;
+        width: 100%;
+        background: url('imgs/kate-small-bc.png') center/cover no-repeat; /*반응형*/
+    }   
     #about {
         margin: 0 10px;
     }
@@ -615,11 +662,11 @@ section {
     #navbar {
         flex-direction: column;
         align-items: flex-start;
-        margin: 0;
+        margin: 0 8px;
     }
     .navbar__toggle-btn {
         display: block;
-        right: 50px;
+        right: 15px;
     }    
     .navbar__logo >a>img{
         margin: 0;
@@ -627,7 +674,6 @@ section {
     .work__projects {
         margin: 0 0px;
     }
-
     .arrow-up {
         right: 50px;
         width: 50px;
@@ -639,7 +685,6 @@ section {
         width: 100%;
         display: none;
     }
-
     .navbar__menu.open {
         display: block;
     }
@@ -697,45 +742,4 @@ section {
 
 
 
-/* below 768px screen width */
-@media screen and (max-width: 768px) {
-  .navbar__toggle-btn {
-    display: block;
-  }
 
-  #navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    /* background-color: var(--color-dark-red); */
-  }
-
-  .navbar__menu {
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    display: none;
-  }
-  .navbar__menu.open {
-    display: block;
-  }
-  .about__majors {
-    flex-direction: column;
-  }
-
-  .major {
-    margin-bottom: 38px;
-  }
-
-  .skillset {
-    flex-direction: column;
-  }
-
-  .project {
-    flex-grow: 1;
-  }
-
-  .career__avatar {
-    width: 80px;
-    height: 80px;
-  }
-}
