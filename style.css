@@ -276,7 +276,7 @@ section {
 /* Skill */
 
 #skills {
-    background: url('imgs/skill-background.png') center/cover no-repeat; /*반응형*/
+    background: url('imgs/skill-bg.png') center/cover no-repeat; /*반응형*/
 }
 
 .skillset {
