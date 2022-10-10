@@ -375,6 +375,7 @@ section {
     border-radius: var(--size-border-radius);
     font-size: var(--font-regular);
     padding: 8px 48px;
+    position: relative;
 }
 
 .category__btn.selected,
@@ -386,7 +387,7 @@ section {
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
     opacity: 1;
-    top: 0;
+    top: 5px;
 }
 
 .category__count {
@@ -397,9 +398,9 @@ section {
     height: 24px;
     line-height: 24px;
     display: inline-block;
-    position: relative;
-    top: -20px;
-    left: 4px;
+    position: absolute;
+    top: -35px;
+    right: 16px;
     opacity: 0;
     transition: all var(--animation-duration) ease-in;
 }
@@ -591,6 +592,7 @@ section {
     }
     h1{
         font-size: var(--font-medium);
+        padding: 10px 0;
     }      
     h2{
         font-size: var(--font-regular);
@@ -602,9 +604,7 @@ section {
         height: 500px;
         width: 360px;
     }
-    .navbar__toggle-btn {
-      display: block;
-    }
+
     #about {
         margin: 0 10px;
     }
@@ -613,10 +613,14 @@ section {
     }
     
     #navbar {
-      flex-direction: column;
-      align-items: flex-start;
-      margin: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0;
     }
+    .navbar__toggle-btn {
+        display: block;
+        right: 50px;
+    }    
     .navbar__logo >a>img{
         margin: 0;
     }
@@ -625,19 +629,17 @@ section {
     }
 
     .arrow-up {
-        right: 65px;
+        right: 50px;
         width: 50px;
         height: 50px;
     }
     .navbar__menu {
-      flex-direction: column;
-      text-align: center;
-      width: 100%;
-      display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
     }
-    .navbar__toggle-btn {
-        right: 60px;
-    }
+
     .navbar__menu.open {
         display: block;
     }
@@ -666,7 +668,14 @@ section {
     .project {
         flex-grow: 1;
     }
-
+    .category__btn{
+        width: 100%;
+        margin: 1px;
+    }
+    .category__btn.selected .category__count, .category__btn:hover .category__count {
+        top: 5px;
+        right: 25px;
+    }
     .career__avatar.dwider {
         width: 150px;
         height: 80px;
@@ -677,7 +686,7 @@ section {
     .career__avatar,
     .career__avatar:nth-child(odd),
     .career__descript>i {
-        margin-right: 0px;
+        margin: 0 0 10px 0;
     }   
  
     .jquery>span:nth-child(2) {
